@@ -10,7 +10,7 @@ import colors from '../config/colors'
 const Main = () => {
 
     // Defining variables which will be sent to the "generatePassword" component, to generate the password, depending on the amount of digits, letters and symbols
-    const [digitCount, setDigitCount] = useState(6)
+    const [digitCount, setDigitCount] = useState(4)
     const [lowerCaseCount, setLowerCaseCount] = useState(0)
     const [upperCaseCount, setUpperCaseCount] = useState(0)
     const [symbolCount, setSymbolCount] = useState(0)
@@ -61,7 +61,7 @@ const Main = () => {
                     <Text style={styles.passwordPreview}>{generatedPassword}</Text>
                 </View>
             </View>
-            {/* A button, that will actually send the information to the generator and back */}
+            {/* A button, that will generate the password */}
             <TouchableOpacity
                 style={styles.button}
                 onPress={() => {
